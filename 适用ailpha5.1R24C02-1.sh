@@ -53,7 +53,7 @@ function check_server_config() {
         cpu_info=$(lscpu | grep "CPU(s):")
         mem_info=$(free -h | grep "Mem:")
         disk_info=$(df -h | grep "/dev")
-        os_info=$(cat /etc/redhat-release)
+        os_info=$(cat /etc/os-release)
         kernel_info=$(uname -r)
 
         if [ -n "$cpu_info" ] && [ -n "$mem_info" ] && [ -n "$disk_info" ] && [ -n "$os_info" ] && [ -n "$kernel_info" ]; then
